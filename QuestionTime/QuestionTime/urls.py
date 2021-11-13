@@ -23,7 +23,7 @@ from users.forms import CustomUserForm
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/register/',
-        RegistrationView.as_view(form_class="CustomUserForm", success_url='/'),
+        RegistrationView.as_view(form_class=CustomUserForm, success_url='/'),
         name='django_registration_register'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
