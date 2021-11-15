@@ -26,5 +26,11 @@ urlpatterns = [
         RegistrationView.as_view(form_class=CustomUserForm, success_url='/'),
         name='django_registration_register',
     ),
+    
     path('accounts/', include('django.contrib.auth.urls')),
+
+    path("api-auth/", include("rest_framework.urls")),
+
+    path("auth/", include("djoser.urls")),
+    path('auth/', include('djoser.urls.authtoken')),
 ]
