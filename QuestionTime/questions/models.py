@@ -2,6 +2,7 @@ import uuid as uuid_lib
 
 from django.conf import settings
 from django.db import models
+
 from core.models import TimeStampedModel
 
 
@@ -14,6 +15,7 @@ class Question(TimeStampedModel):
 
     def __str__(self):
         return self.content
+
 
 class Answer(TimeStampedModel):
     uuid = models.UUIDField(db_index=True, default=uuid_lib.uuid4, editable=False)
