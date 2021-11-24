@@ -1,8 +1,18 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
     <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <router-link class="navbar-brand" :to="{ name: 'home' }">
+                QuestionTime
+            </router-link>
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+            >
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -22,3 +32,17 @@ export default {
     name: "Navbar",
 };
 </script>
+
+<style>
+    .my-navbar {
+        border-bottom: 1px solid #ddd;
+    }
+    .navbar-brand{
+        font-weight: bold;
+        font-size: 150%;
+    }
+
+    .navbar-brand:hover{
+        color: #dc3545 !important;
+    }
+</style>
