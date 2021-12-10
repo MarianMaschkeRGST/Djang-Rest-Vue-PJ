@@ -7,6 +7,16 @@ const routes = [
     name: 'home',
     component: Home
   },
+ // Example creation of a new page:
+ // Imagine the routes constant to be the relay station, way pointer
+ // Target new page with router-link using name property
+ // Path property is what will be added to the url
+ // Component is the template used
+  // {
+  //   path: '/new-one',
+  //   name: 'home-two',
+  //   component: Home
+  // },
   // {
   //   path: '/about',
   //   name: 'About',
