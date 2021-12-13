@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="answer-body">
         <p class="text-muted">
             <strong>{{ answer.author}} &#8901; {{answer.created_at }}</strong>
         </p>
         <hr>
-        <p style="white-space: pre-wrap;"> {{ answer.body }}</p>
+        <p class="answer-body-content"> {{ answer.body }}</p>
         <hr>
     </div>   
 </template>

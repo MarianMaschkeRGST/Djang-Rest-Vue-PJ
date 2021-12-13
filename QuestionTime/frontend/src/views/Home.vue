@@ -6,8 +6,8 @@
       {{ this.questions }}
     </div>
   </div> -->
-  <div class="home mt-2">
-    <div class="container">
+  <div class="home mt-4">
+    <div class="container mt-">
       <div v-for="question in questions" :key="question.uuid">
         <div class="card shadow p-2 mb-4 bg-body rounded">
           <div class="card-body">
