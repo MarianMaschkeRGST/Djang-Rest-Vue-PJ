@@ -15,21 +15,27 @@
               Posted by 
               <span class="question-author">
                 {{ question.author }}
-                </span>
-                </p>
-            <h2>{{ question.content }}</h2>
+              </span>
+            </p>
+            <h2>
+              <router-link
+                :to="{ name: 'question', params: { slug: question.slug}}"
+                class="question-link">
+                  {{ question.content }}
+              </router-link>
+            </h2>
             <div class="mb-0">
               Answers: {{ question.answers_count}}
             </div>
-          </div>
         </div>
       </div>
-        <div class="my-4">
-          <p  v-show="loadingQuestion">...Loading...</p>
-          <button v-show="next" @click="getQuestions" class="btn btn-sm btn-outline-success">
-            Load More
-          </button>
-        </div>
+    </div>
+      <div class="my-4">
+        <p  v-show="loadingQuestion">...Loading...</p>
+        <button v-show="next" @click="getQuestions" class="btn btn-sm btn-outline-success">
+          Load More
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -68,13 +74,24 @@ export default {
     }
   },
   created() {
+    document.title = "QuestionTime";
     this.getQuestions();
   }
 }
 </script>
 <style>
+.question-link {
+  color: unset;
+  font-weight: 400;
+  text-decoration: none !important;
+}
+.question-link:hover {
+  color: #4d565f;
+}
+
 .question-author {
   font-weight: bold;
   color: #dc3545;
 }
+
 </style>

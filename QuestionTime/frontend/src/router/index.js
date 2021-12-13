@@ -7,6 +7,15 @@ const routes = [
     name: 'home',
     component: Home
   },
+  {
+    path: '/question/:slug',
+    name: 'question',
+    // route level code-splitting
+    // this generates a separate chunk (question-time.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "question" */ '../views/Question.vue'),
+    props: true
+  }
  // Example creation of a new page:
  // Imagine the routes constant to be the relay station, way pointer
  // Target new page with router-link using name property
@@ -17,14 +26,6 @@ const routes = [
   //   name: 'home-two',
   //   component: Home
   // },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
 ]
 
 const router = createRouter({
