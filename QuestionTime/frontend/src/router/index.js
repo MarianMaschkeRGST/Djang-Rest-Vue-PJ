@@ -15,7 +15,13 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "question" */ '../views/Question.vue'),
     props: true
-  }
+  },
+  {
+    path: '/ask/',
+    name: 'question-editor',
+    component: () => import(/* webpackChunkName: "question" */ '../views/QuestionEditor.vue'),
+    props: true
+  },
  // Example creation of a new page:
  // Imagine the routes constant to be the relay station, way pointer
  // Target new page with router-link using name property

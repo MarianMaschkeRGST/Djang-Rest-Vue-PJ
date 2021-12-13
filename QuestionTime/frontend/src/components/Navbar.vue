@@ -19,6 +19,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
                 <li>
+                    <router-link class="btn btn-danger nav-item me-2" :to="{ name: 'question-editor' }">
+                        Ask a question!
+                    </router-link>
+                </li>
+                <li>
                     <a class="btn btn-outline-success nav-item" href="/accounts/logout/">Logout</a>
                 </li>
             </ul>
