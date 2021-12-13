@@ -71,7 +71,7 @@ export default {
         console.log(error.response);
         alert(error.response.statusText);
       }
-    }
+    },
   },
   created() {
     document.title = "QuestionTime";
