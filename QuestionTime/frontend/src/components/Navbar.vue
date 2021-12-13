@@ -1,7 +1,7 @@
 <template>
 <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
     <div class="container">
-            <router-link class="navbar-brand" :to="{ name: 'home-two' }">
+            <router-link class="navbar-brand" :to="{ name: 'home' }">
                 QuestionTime
             </router-link>
         <button 
