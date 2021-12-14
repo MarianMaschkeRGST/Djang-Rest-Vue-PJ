@@ -27,7 +27,7 @@
         </div>
         <div v-else>
             <button 
-                class="btn" 
+                class="btn edit-btn" 
                 :class="{'btn-warning':userLikedAnswer, 'btn-outline-danger':!user_has_answered}"
                 @click="toggleLike">
                 💓 &nbsp;
