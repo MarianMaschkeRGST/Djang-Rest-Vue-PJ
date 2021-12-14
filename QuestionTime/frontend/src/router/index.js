@@ -17,7 +17,8 @@ const routes = [
     props: true
   },
   {
-    path: '/ask/',
+    // Question mark makes parameter optional
+    path: '/ask/:slug?',
     name: 'question-editor',
     component: () => import(/* webpackChunkName: "question" */ '../views/QuestionEditor.vue'),
     props: true

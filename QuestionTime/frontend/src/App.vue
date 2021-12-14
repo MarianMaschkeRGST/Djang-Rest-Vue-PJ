@@ -2,7 +2,7 @@
   <div id="nav">
     <NavbarComponent />
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
