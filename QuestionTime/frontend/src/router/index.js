@@ -29,6 +29,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "answer-editor" */ '../views/AnswerEditor.vue'),
     props: true
   },
+  {
+    path: '/:catchAll(.*)',
+    name: 'page-not-found',
+    component: () => import(/* webpackChunkName: "not-found" */ '../views/NotFound.vue'),
+  },
  // Example creation of a new page:
  // Imagine the routes constant to be the relay station, way pointer
  // Target new page with router-link using name property
