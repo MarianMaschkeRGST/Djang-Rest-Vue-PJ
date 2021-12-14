@@ -39,6 +39,7 @@
                 v-for="answer in answers" 
                 :key="answer.uuid" 
                 :answer="answer"
+                :requestUser="requestUser"
                 />
         </div>
         <div class="my-4">
@@ -183,6 +184,11 @@ export default {
 .answer-body-content {
     white-space: pre-wrap;
     margin-left: 32px;
+}
+
+.edit-btn{
+    margin-left: 32px;
+    font-size: 12px;
 }
 
 hr {

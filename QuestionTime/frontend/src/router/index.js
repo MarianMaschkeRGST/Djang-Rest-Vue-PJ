@@ -20,7 +20,13 @@ const routes = [
     // Question mark makes parameter optional
     path: '/ask/:slug?',
     name: 'question-editor',
-    component: () => import(/* webpackChunkName: "question" */ '../views/QuestionEditor.vue'),
+    component: () => import(/* webpackChunkName: "question-editor" */ '../views/QuestionEditor.vue'),
+    props: true
+  },
+  {
+    path: '/answer/:uuid',
+    name: 'answer-editor',
+    component: () => import(/* webpackChunkName: "answer-editor" */ '../views/AnswerEditor.vue'),
     props: true
   },
  // Example creation of a new page:
